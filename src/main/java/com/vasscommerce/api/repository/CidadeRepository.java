@@ -1,0 +1,10 @@
+package com.vasscommerce.api.repository;
+
+import com.vasscommerce.api.model.Cidade;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface CidadeRepository extends JpaRepository<Cidade, Long> {
+
+    List<Cidade> findByEstadoIdOrderByNome(Long estadoId);
+}
