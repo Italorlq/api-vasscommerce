@@ -1,0 +1,58 @@
+POST http://localhost:8080/produto
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nome": "Tablet Pro",
+  "descricao": "Tablet com tela de 11 polegadas",
+  "fotoUrl": "http://vasscommerce.com.br/img/tablet.png",
+  "valorUnitario": 3200.00,
+  "idCategoria": 1
+}
+
+###
+
+GET http://localhost:8080/produto/4
+Accept: application/json
+
+###
+
+GET http://localhost:8080/produto/9999
+Accept: application/json
+
+###
+
+POST http://localhost:8080/produto
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nome": "",
+  "valorUnitario": -10
+}
+
+###
+
+POST http://localhost:8080/produto
+Content-Type: application/json
+Accept: application/json
+
+{ "nome": "Quebrado",
+
+###
+
+GET http://localhost:8080/produto?nome=tablet&valorMinimo=1000&valorMaximo=5000
+Accept: application/json
+
+
+###
+
+POST http://localhost:8080/produto
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nome": "Produto Fantasma",
+  "valorUnitario": 10.00,
+  "idCategoria": 999
+}
